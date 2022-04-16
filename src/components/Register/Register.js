@@ -43,7 +43,13 @@ const Register = () => {
           register={register}
         />
         {errors.email && <Error>{errors.email.message}</Error>}
-        <Button color='blue' type='submit' text='Subscribe' />
+        <Button
+          color='bg-blue-700'
+          hover='hover:bg-blue-600'
+          textCol='text-white'
+          type='submit'
+          text='Subscribe'
+        />
       </form>
     </div>
   );

@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Button = ({ type, color, text }) => {
+const Button = ({ type, color, text, hover, textCol }) => {
   return (
-    <button className={`bg-${color}-700 text-white p-3 rounded-md`} type={type}>
+    <button
+      className={`${color} ${hover} ${textCol} p-3 rounded-md`}
+      type={type}
+    >
       {text}
     </button>
   );
