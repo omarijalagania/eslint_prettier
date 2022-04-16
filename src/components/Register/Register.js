@@ -17,7 +17,7 @@ const Register = () => {
   return (
     <div className='flex flex-col max-w-md mx-auto mt-20'>
       <form
-        className='p-10 shadow-md flex flex-col space-y-4'
+        className='p-10 shadow-md bg-gray-50 rounded-lg flex flex-col space-y-4'
         onSubmit={handleSubmit(onSubmit)}
       >
         <Input
