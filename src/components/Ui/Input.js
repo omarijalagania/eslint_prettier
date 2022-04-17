@@ -9,7 +9,7 @@ const Input = (props) => {
       type={type}
       name={name}
       placeholder={placeholder}
-      {...register(name, { required: `${name} required` })}
+      {...register(name)}
     />
   );
 };
