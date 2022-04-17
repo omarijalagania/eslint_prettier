@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Input from '../Ui/Input';
-// import Error from '../Ui/Error';
+import Error from '../Ui/Error';
 import Button from '../Ui/Button';
 
 const Register = () => {
@@ -36,9 +36,7 @@ const Register = () => {
           type='text'
           register={register}
         />
-        {errors.firstName && (
-          <p className='text-red-700'>{errors.firstName.message}</p>
-        )}
+        {errors.firstName && <Error>{errors.firstName.message}</Error>}
         <Input
           type='text'
           name='lastName'
@@ -48,9 +46,7 @@ const Register = () => {
             errors.lastName?.message ? 'border-red-700' : 'border-gray-300'
           } rounded-md`}
         />
-        {errors.lastName && (
-          <p className='text-red-700'>{errors.lastName.message}</p>
-        )}
+        {errors.lastName && <Error>{errors.lastName.message}</Error>}
         <Input
           type='email'
           name='email'
@@ -60,7 +56,7 @@ const Register = () => {
             errors.email?.message ? 'border-red-700' : 'border-gray-300'
           } rounded-md`}
         />
-        {errors.email && <p className='text-red-700'>{errors.email.message}</p>}
+        {errors.email && <Error>{errors.email.message}</Error>}
         <Input
           type='password'
           name='password'
@@ -70,9 +66,7 @@ const Register = () => {
             errors.password?.message ? 'border-red-700' : 'border-gray-300'
           } rounded-md`}
         />
-        {errors.password && (
-          <p className='text-red-700'>{errors.password.message}</p>
-        )}
+        {errors.password && <Error>{errors.password.message}</Error>}
         <Input
           type='password'
           name='confirmPassword'
@@ -85,7 +79,7 @@ const Register = () => {
           } rounded-md`}
         />
         {errors.confirmPassword && (
-          <p className='text-red-700'>{errors.confirmPassword.message}</p>
+          <Error>{errors.confirmPassword.message}</Error>
         )}
         <Button
           color='bg-blue-700'
