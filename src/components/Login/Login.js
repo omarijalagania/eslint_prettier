@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../Header/Header';
 import Btn from '../Ui/Btn/Btn';
 import Input from '../Ui/Input/Input';
 import Line from '../Ui/Line/Line';
@@ -8,25 +9,7 @@ const Login = () => {
     <div className='min-h-screen bg-gray-200 md:pt-20'>
       <div className='max-w-[700px] p-3 mx-auto'>
         {/* Header */}
-        <div className='flex justify-between items-center'>
-          <img
-            className='w-28 cursor-pointer md:w-48'
-            src='https://redberry.international/wp-content/uploads/2022/01/redberrylogo.svg'
-            alt='logo'
-          />
-          <p className='hidden font-light md:block'>
-            Don’t have an account?
-            <a className='text-red-500 ml-1' href='/test'>
-              Sign up!
-            </a>
-          </p>
-          {/* mobile menu icon */}
-          <img
-            className='w-5 h-5 cursor-pointer md:hidden'
-            src='/images/menu.png'
-            alt='mobile-menu'
-          />
-        </div>
+        <Header />
         <div className=' mt-10 flex flex-col justify-center items-center md:mt-20'>
           <h1 className='text-2xl mb-1 font-semibold md:text-4xl'>
             Welcome Back
